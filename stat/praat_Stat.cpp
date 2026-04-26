@@ -1032,7 +1032,7 @@ FORM (CONVERT_EACH_TO_ONE__Table_downto_TableOfReal, U"Table: Down to TableOfRea
 	OK
 DO
 	CONVERT_EACH_TO_ONE (Table)
-		const integer columnNumber = Table_columnNameToNumber_0 (me, columnForRowLabels);
+		const integer columnNumber = Table_columnNameToNumber_e (me, columnForRowLabels);
 		autoTableOfReal result = Table_to_TableOfReal (me, columnNumber);
 	CONVERT_EACH_TO_ONE_END (my name.get())
 }
@@ -1051,8 +1051,8 @@ FORM (CONVERT_EACH_TO_ONE__Table_to_RealTier, U"Table: To RealTier", nullptr) {
 	OK
 DO
 	CONVERT_EACH_TO_ONE (Table)
-		const integer timeColumn = Table_columnNameToNumber_0 (me, columnWithTimes);
-		const integer valueColumn = Table_columnNameToNumber_0 (me, columnWithValues);
+		const integer timeColumn = Table_columnNameToNumber_e (me, columnWithTimes);
+		const integer valueColumn = Table_columnNameToNumber_e (me, columnWithValues);
 		autoRealTier result = Table_to_RealTier (me, timeColumn, valueColumn, startTime, endTime);
 	CONVERT_EACH_TO_ONE_END (my name.get())
 }
